@@ -41,6 +41,43 @@ body {
     color: #4CAF50; /*---Hover to make interactive---*/
 }
 
+/*---Footer BAnner---*/
+#footer-banner {
+    background-color: #333333; 
+    color: #E0E0E0; 
+    padding: 30px 40px; 
+    text-align: center; 
+    margin-top: 50px; 
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); 
+}
+
+#footer-banner .footer-links {
+    margin-bottom: 15px; 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 25px; 
+}
+
+#footer-banner .footer-links a {
+    text-decoration: none; 
+    color: #E0E0E0; 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; 
+    font-size: 0.95em;
+    transition: color 0.3s ease; 
+}
+
+#footer-banner .footer-links a:hover {
+    color: #4CAF50; 
+}
+
+#footer-banner .copyright {
+    font-size: 0.85em;
+    color: #A0A0A0; 
+    margin: 0; 
+}
+
 /*---Hero Section---*/
 #hero-section {
     background-image: url('images/hero-bg.png'); 
