@@ -3,33 +3,62 @@
 	<head>
 		<link rel="stylesheet" href="style.css" >
 		<meta charset="UTF-8" />
-		<title>Home Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--To ensure responsive design-->
+		<title>The Honking Horde - Home</title>
 	</head>
 	<body>
-		<h1>MoodTrip</h1>
-		<h2>This is a sub-heading</h2>
-		<p>Hello Everyone!</p>
-		<h3>This is an even smaller heading</h3>
-		<p>This is me, practicing how to make paragraphs with HTML.</p>
-		<h4>An even smaller heading!</h4>
-		<p>These headings are whack!</p>
-		<h5>How much smaller can these headings get?</h5>
-		<p>I guess we'll find out, won't we?</p>
-		<h6>This is the final form of small headings!</h6>
-		<p>Wow, over Level 9000!</p>
-		
-		<!--This is where all the images go.
- 			All images hyperlink to separate pages for full image-->
-		<a href="boat.html"><img src="images/boat.jpg" height="150" width="200" /></a>
-		<a href="cablecar.html"><img src="images/cablecar.jpg" height="150" width="200" /></a>
-		<a href="city.html"><img src="images/city.jpg" height="150" width="200" /></a>
-		<a href="plane.html"><img src="images/plane.jpg" height="150" width="200" /></a>
-		<a href="plane2.html"><img src="images/plane2.jpg" height="150" width="200" /></a>
-		<a href="truck.html"><img src="images/truck.jpg" height="150" width="200" /></a>
-		<a href="yacht.html"><img src="images/yacht.jpg" height="150" width="200" /></a>
-		
-		<p><a href="https://www.google.com/">Click here to go to Google</a></p>
-		<p><a href="https://itvarsity.mailchimpsites.com/">Click here to go to IT Varsity</a></p>
-		<p><a href="about.html">About US</a></p>
+		<!--Banner Section-->
+		<header id = "top-banner">
+			<a href = "index.html" class = "site-name-link">
+				<h1 class = "sitename">The Honking Horde</h1>
+			</a>
+		</header>
+
+		<main>
+            <section id="hero-section">
+                <div class="hero-content">
+                    <h2>A Journey of World Domination</h2>
+                    <p>Follow along as we uncover plotting geese that are taking over the world. One honk at a time!</p>
+                </div>
+            </section>
+
+            <section id="image-grid-section">
+                <h3>The Latest Discoveries</h3>
+                <div class="image-grid">
+                    <a href="brentgeese.html" class="image-item">
+                        <img src="images/1_BrentGeese.jpg" alt="Brent Goose" />
+                        <span class="image-title">Cley Marshes, Norfolk</span>
+                    </a>
+                    <a href="greenlandbarnacle.html" class="image-item">
+                        <img src="images/2_BarnacleGeese.jpg" alt="Greenland Barnacle Goose" />
+                        <span class="image-title">Islay, Scotland</span>
+                    </a>
+                    <a href="svalbardbarnaclegeese.html" class="image-item">
+                        <img src="images/3_SvalbardGeese.jpg" alt="Svarlbard Barnalce Goose" />
+                        <span class="image-title">WWT Caerlaverock, Scotland</span>
+                    </a>
+                    <a href="cacklinggeese.html" class="image-item">
+                        <img src="images/4_CacklingGeese.jpg" alt="Cackling Goose" />
+                        <span class="image-title">Northern Indiana, USA</span>
+                    </a>
+                    <a href="canadageese.html" class="image-item">
+                        <img src="images/5_CanadaGeese.jpg" alt="Canada Goose" />
+                        <span class="image-title">North Dakota, USA</span>
+                    </a>
+                    <a href="specklebellies.html" class="image-item">
+                        <img src="images/6_SpecklebellyGeese.jpg" alt="Specklebelly Goose" />
+                        <span class="image-title">Texas, USA</span>
+                    </a>
+                    <a href="egyptiangeese.html" class="image-item">
+                        <img src="images/7_EgyptianGeese.jpg" alt="Egyptian Goose" />
+                        <span class="image-title">Marievale, South Africa</span>
+                    </a>
+                    <a href="capebarrengeese.html" class="image-item">
+                        <img src="images/8_ CapeBarrenGeese.jpg" alt="Cape Barren Goose" />
+                        <span class="image-title">All over the place, Australia</span>
+                    </a>
+                </div>
+            </section>
+        </main>
 	</body>	
 </html>
