@@ -41,7 +41,7 @@ body {
     color: #4CAF50; /*---Hover to make interactive---*/
 }
 
-/*---Footer BAnner---*/
+/*---Footer Banner (Global)---*/
 #footer-banner {
     background-color: #333333; 
     color: #E0E0E0; 
@@ -187,15 +187,26 @@ body {
     text-align: left; 
 }
 
-/*---Content Pages Styling---*/
+/*---Styles for Individual Image Page---*/
 #image-detail-page {
-    padding: 50px 40px; /* Padding for the entire content area */
-    max-width: 1000px; /* Max width for the content for readability */
-    margin: 20px auto; /* Center the content and add space from header/footer */
-    display: flex; /* Use flexbox for image and description layout */
-    flex-direction: column; /* Stack image and description vertically by default */
-    align-items: center; /* Center items horizontally in column layout */
-    gap: 30px; /* Space between image display and description */
+    padding: 50px 40px; 
+    max-width: 1000px; 
+    margin: 20px auto; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 30px; 
+}
+
+/*---Styling for MAin HEading on Content Pages---*/
+#image-detail-page .page-main-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em; 
+    color: #333333;
+    margin-bottom: 30px; 
+    text-align: center;
+    max-width: 800px; 
+    line-height: 1.2;
 }
 
 .image-content-wrapper {
@@ -203,67 +214,67 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 800px; /* Max width for the image and its credit */
+    max-width: 800px; 
 }
 
 .image-display {
-    position: relative; /* For positioning photo credit */
-    width: 100%; /* Image container takes full width */
-    margin-bottom: 10px; /* Space between image and description content */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Consistent shadow */
-    border-radius: 8px; /* Consistent rounded corners */
-    overflow: hidden; /* Ensures rounded corners are visible */
+    position: relative; 
+    width: 100%; 
+    margin-bottom: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+    border-radius: 8px; 
+    overflow: hidden; 
 }
 
 .image-display .main-image {
-    width: 100%; /* Image fills its container */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
     display: block;
-    border-radius: 8px; /* Apply rounded corners to the image itself */
+    border-radius: 8px; 
 }
 
 .photo-credit {
-    position: absolute; /* Position relative to .image-display */
-    bottom: 10px; /* Distance from bottom */
-    right: 10px; /* Distance from right */
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    position: absolute; 
+    bottom: 10px; 
+    right: 10px; 
+    background-color: rgba(255, 255, 255, 0.7); 
     padding: 5px 8px;
     border-radius: 4px;
-    font-size: 0.75em; /* Small text size */
-    color: #666666; /* Slightly lighter gray */
-    z-index: 10; /* Ensure it's above the image */
+    font-size: 0.75em; 
+    color: #666666; 
+    z-index: 10; 
 }
 
 .photo-credit a {
-    color: #4CAF50; /* Soft Teal for the link */
-    text-decoration: none; /* No underline by default */
+    color: #4CAF50; 
+    text-decoration: none; 
     transition: color 0.3s ease;
 }
 
 .photo-credit a:hover {
-    text-decoration: underline; /* Underline on hover */
-    color: #333333; /* Darker on hover */
+    text-decoration: underline; 
+    color: #333333; 
 }
 
 .description-content {
-    max-width: 800px; /* Keep description content readable width */
-    line-height: 1.7; /* Good line spacing for readability */
+    max-width: 800px; 
+    line-height: 1.7; 
     font-size: 1.05em;
-    text-align: left; /* Align text naturally */
+    text-align: left; 
 }
 
 .description-content h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8em; /* Large heading for the page title */
+    font-size: 2.5em; 
     color: #333333;
     margin-bottom: 25px;
-    text-align: center; /* Center the description heading */
+    margin-top: 30px; 
+    text-align: center; 
 }
 
 .description-content p {
-    margin-bottom: 1em; /* Space between paragraphs */
-    color: #333333; /* Ensure paragraph text is charcoal gray */
-}
+    margin-bottom: 1em; 
+    color: #333333; 
 
 /*---Responsive Adjustments---*/
 @media (max-width: 768px) {
@@ -274,34 +285,41 @@ body {
     #top-banner .site-name {
         font-size: 1.8em;
     }
-    #hero-section {
+    #hero-section { /*---Only for index.html---*/
         height: 350px;
     }
-    #hero-section h2 {
+    #hero-section h2 { /*---Only for index.html---*/
         font-size: 2.5em;
     }
-    #hero-section p {
+    #hero-section p { /*---Only for index.html---*/
         font-size: 1em;
     }
-    #image-grid-section {
+    #image-grid-section { /*---Only for index.html---*/
         padding: 40px 20px;
     }
-    #image-grid-section h3 {
+    #image-grid-section h3 { /*---Only for index.html---*/
         font-size: 2em;
         margin-bottom: 30px;
     }
-    .image-grid {
+    .image-grid { /*---Only for index.html---*/
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-    .image-item img {
+    .image-item img { /*---Only for index.html---*/
         height: 180px;
     }
-#image-detail-page {
+
+    /*---Responsive for Individual Image Pages---*/
+    #image-detail-page {
         padding: 30px 20px;
         margin: 15px auto;
     }
+    #image-detail-page .page-main-heading { 
+        font-size: 2.5em;
+        margin-bottom: 25px;
+    }
     .description-content h2 {
         font-size: 2.2em;
+        margin-top: 20px; 
     }
     .description-content p {
         font-size: 0.95em;
@@ -316,30 +334,52 @@ body {
     #top-banner .site-name {
         font-size: 1.5em;
     }
-    #hero-section {
+    #hero-section { /*---Only for index.html---*/
         height: 280px;
     }
-    #hero-section h2 {
+    #hero-section h2 { /*---Only for index.html---*/
         font-size: 2em;
     }
-    #hero-section p {
+    #hero-section p { /*---Only for index.html---*/
         font-size: 0.9em;
     }
-    #image-grid-section {
+    #image-grid-section { /*---Only for index.html---*/
         padding: 30px 15px;
     }
-    #image-grid-section h3 {
+    #image-grid-section h3 { /*---Only for index.html---*/
         font-size: 1.8em;
     }
-    .image-grid {
-        grid-template-columns: 1fr; /*---Singl Column on Small Screens---*/
+    .image-grid { /*---Only for index.html---*/
+        grid-template-columns: 1fr; /*---Single Column on Small Screens---*/
     }
-    .image-item img {
+    .image-item img { /*---Only for index.html---*/
         height: 220px;
     }
-/*---Responsive Adjustments for Footer BAnner---*/
-#footer-banner .footer-links {
+    #footer-banner .footer-links {
         flex-direction: column; /*---To Stack Links for Small Screens---*/
         gap: 10px; 
+    }
+
+    /*---Responsive for Individual Image Pages---*/
+    #image-detail-page {
+        padding: 20px 15px;
+        margin: 10px auto;
+    }
+    #image-detail-page .page-main-heading { 
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    .description-content h2 {
+        font-size: 1.8em;
+        margin-top: 15px; 
+    }
+    .description-content p {
+        font-size: 0.9em;
+    }
+    .photo-credit {
+        font-size: 0.7em; 
+        bottom: 8px;
+        right: 8px;
+        padding: 4px 6px;
     }
 }
