@@ -1,8 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Contact Us</title>
-    </head>
-    <body></body>
+<head>
+    <link rel="stylesheet" href="style.css" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Honking Horde - Contact Us</title>
+</head>
+<body>
+    <header id="top-banner">
+        <a href="index.html" class="site-name-link">
+            <h1 class="site-name">The Honking Horde</h1>
+        </a>
+    </header>
+
+    <main id="contact-page">
+        <section class="contact-container">
+            <header class="contact-header">
+                <h1 class="contact-title">Report Your Goose Encounters</h1>
+                <p class="contact-intro">Have you witnessed suspicious avian activity? Are you being watched? Share your story with Professor Peregrine and join The Cause!</p>
+            </header>
+            
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="yourName">Your Name:</label>
+                    <input type="text" id="yourName" name="contactName" placeholder="Enter your name">
+                </div>
+                <div class="form-group radio-group">
+                    <input type="radio" id="anonymous" name="contactOption" value="anonymous">
+                    <label for="anonymous">Anonymous: I fear The Geese</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject of your message:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Please select...</option>
+                        <option value="shenanigans">I've seen some geese that are up to shenanigans.</option>
+                        <option value="followed">I suspect I am being followed by geese.</option>
+                        <option value="infestation">How do I get rid of a goose infestation using only household chemicals?</option>
+                        <option value="cause_info">More information about The Cause.</option>
+                        <option value="illuminati">Can you send me more information about the links between geese and the Illuminati?</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="8" placeholder="Type your detailed report here..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email Address (so we can reply):</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <button type="submit" class="submit-button">Send Your Report</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="footer-banner">
+        <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="copyright">&copy; 2025 The Honking Horde. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Simple JavaScript to manage name/anonymous input
+        document.addEventListener('DOMContentLoaded', function() {
+            const yourNameInput = document.getElementById('yourName');
+            const anonymousRadio = document.getElementById('anonymous');
+
+            anonymousRadio.addEventListener('change', function() {
+                if (this.checked) {
+                    yourNameInput.value = ''; // Clear name input if anonymous is chosen
+                    yourNameInput.disabled = true; // Disable name input
+                    yourNameInput.removeAttribute('required'); // Make name not required if anonymous
+                }
+            });
+
+            yourNameInput.addEventListener('input', function() {
+                // If user starts typing, uncheck anonymous
+                if (yourNameInput.value.length > 0) {
+                    anonymousRadio.checked = false;
+                    yourNameInput.disabled = false; // Ensure it's enabled if user types after being disabled
+                }
+            });
+
+            yourNameInput.addEventListener('focus', function() {
+                 // When name input is focused, make sure it's enabled and anonymous is unchecked
+                yourNameInput.disabled = false;
+                anonymousRadio.checked = false;
+            });
+            
+            // Set initial state: if name is empty, enable it and ensure anonymous is not checked.
+            // If anonymous is pre-checked (e.g., from browser autofill), ensure name is disabled.
+            if (anonymousRadio.checked) {
+                 yourNameInput.value = '';
+                 yourNameInput.disabled = true;
+                 yourNameInput.removeAttribute('required');
+            } else {
+                 yourNameInput.disabled = false;
+                 // Add back required if you initially want name to be required unless anonymous is checked
+                 // For now, it's not explicitly required in HTML, so leave it as is.
+            }
+        });
+    </script>
+</body>
 </html>
